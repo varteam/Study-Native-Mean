@@ -12,8 +12,8 @@ app.use(bodyParser.json());
 //  res.send("hello world");
 //});
 
-app.set('port', 3000);
-app.listen(app.get('port'));
+//app.set('port', 3000);
+app.listen(3000);
 
 app.get('/contactlist', function(req, res) {
   console.log("I receive a get request");
