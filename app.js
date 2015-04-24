@@ -2,7 +2,7 @@ var express = require('express');
 
 var app = express();
 var mongojs = require('mongojs');
-var db = mongojs('mean-dev', ['contactlist']);
+var db = mongojs('mongodb://' + process.env.MONGODB_USERNAME + ':' + process.env.MONGODB_PASSWORD + '@' + process.env.MONGODB_HOST + ':' + process.env.MONGODB_PORT, ['contactlist']);
 var bodyParser = require('body-parser');
 
 app.use(express.static(__dirname + '/public'));
